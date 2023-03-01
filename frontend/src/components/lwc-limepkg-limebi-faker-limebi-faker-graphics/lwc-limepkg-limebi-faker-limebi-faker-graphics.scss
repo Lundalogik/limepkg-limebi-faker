@@ -1,0 +1,44 @@
+:host(lwc-limebi-faker-graphics) {
+    box-shadow: 0 0 0.1875rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: block;
+    height: 100%;
+    .lime-bi-container {
+        height: 95%;
+    }
+    .header {
+        border-bottom: 0.0625rem solid #e1e1e1;
+        display: -webkit-flex;
+        display: flex;
+        font-size: 0.8125rem;
+        padding: 0 1.25rem;
+        background-color: #f8f8f8;
+        min-height: 3.125rem;
+        position: relative;
+
+        .expand {
+            color: #a6a6a6;
+            position: absolute;
+            right: 2px;
+            top: 1px;
+        }
+    }
+    limel-icon {
+        align-self: center;
+        margin-right: 0.8125rem;
+        color: white;
+        &.Lime-bi {
+            background-color: var(--lime-turquoise);
+        }
+    }
+    .lime-bi-text {
+        align-self: center;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.45;
+        display: inline;
+    }
+    .div {
+        height: 100%;
+    }
+}

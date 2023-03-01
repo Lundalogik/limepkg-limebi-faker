@@ -1,0 +1,62 @@
+{
+  "name": "limepkg-limebi-faker-lwc-components",
+  "version": "0.0.1",
+  "description": "Lime BI Faker",
+  "author": "Lime Technologies",
+  "license": "UNLICENSED",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "jsnext:main": "dist/esm/index.mjs",
+  "main": "dist/index.js",
+  "types": "dist/types/interface.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "cross-env-shell SASS_PATH=node_modules \"stencil build --config stencil.config.dist.ts\"",
+    "dev": "cross-env-shell SASS_PATH=node_modules \"stencil build --dev --docs\"",
+    "dev:watch": "cross-env-shell SASS_PATH=node_modules \"stencil build --dev --watch --docs\"",
+    "dev:es5": "cross-env-shell SASS_PATH=node_modules \"stencil build --dev --docs --es5\"",
+    "dev:es5:watch": "cross-env-shell SASS_PATH=node_modules \"stencil build --dev --watch --docs --es5\"",
+    "lint": "npm run lint:src && npm run lint:scss",
+    "lint:fix": "npm run lint:src:fix && npm run lint:scss:fix",
+    "lint:prod": "npm run lint:src:prod && npm run lint:scss:prod",
+    "lint:src": "eslint \"**/*.{ts,tsx,js}\" && prettier -c \"{!(package*).json,.prettierrc}\"",
+    "lint:src:fix": "eslint \"**/*.{ts,tsx,js}\" --fix && prettier --write \"{!(package*).json,.prettierrc}\"",
+    "lint:src:prod": "eslint \"**/*.{ts,tsx,js}\" --rule \"linebreak-style: [error, unix]\" && prettier -c \"{!(package*).json,.prettierrc}\"",
+    "lint:scss": "prettier -c --no-error-on-unmatched-pattern --ignore-path ./.gitignore **/*.scss",
+    "lint:scss:fix": "prettier --write --no-error-on-unmatched-pattern --ignore-path ./.gitignore **/*.scss",
+    "lint:scss:prod": "prettier -c --no-error-on-unmatched-pattern --end-of-line lf --ignore-path ./.gitignore **/*.scss",
+    "start": "npm run dev:watch",
+    "start:es5": "npm run dev:es5:watch",
+    "test": "cross-env-shell SASS_PATH=node_modules \"stencil test --spec\"",
+    "test:watch": "stencil test --spec --watchAll"
+  },
+  "dependencies": {
+    "@limetech/lime-elements": "^35.0.0",
+    "@limetech/lime-web-components": "^4.53.0",
+    "jest-cli": "^26.6.3"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.7.1",
+    "@stencil/eslint-plugin": "^0.3.1",
+    "@stencil/sass": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsdoc": "^33.1.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-sonarjs": "^0.7.0",
+    "ncp": "^2.0.0",
+    "prettier": "^2.3.0",
+    "shx": "^0.3.3",
+    "typescript": "^3.9.7"
+  }
+}

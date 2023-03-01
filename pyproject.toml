@@ -1,0 +1,81 @@
+[build-system]
+requires      = ['poetry>=0.12']
+build-backend = 'poetry.masonry.api'
+
+[tool.metadata]
+display_name  = 'Lime BI Faker'
+package_name  = 'limepkg-limebi-faker'
+lib_name      = 'limepkg_limebi_faker'
+
+[tool.poetry]
+name        = 'limepkg-limebi-faker'
+version     = '0.1.0'
+description = 'Lime CRM package'
+authors     = ['Author <author@lime.tech>']
+
+[[tool.poetry.source]]
+name = 'lime'
+url  = 'https://pypi.lime.tech/simple/'
+secondary = true
+
+[tool.poetry.plugins.'lime_plugins']
+'limepkg-limebi-faker' = 'limepkg_limebi_faker'
+
+[tool.poetry.dependencies]
+python = '~3.7.3'
+lime-crm = '^2.457.0'
+
+[tool.poetry.dev-dependencies]
+autopep8 = '>=1'
+pytest = '>=6.2.3'
+flake8 = '>3'
+black = '^22.1.0'
+isort = '^5.0.0'
+
+[tool.lime]
+[tool.lime.project]
+project_version = '1.173.0'
+project_type    = 'package'
+
+
+[[tool.lime.static_content]]
+[tool.lime.static_content.build_step]
+cwd = "frontend"
+commands = ["npm ci", "npm run build"]
+
+[tool.lime.static_content.copy_step]
+source = "frontend/dist"
+destination = "limepkg_limebi_faker/web_components/static"
+
+[tool.pytest.ini_options]
+minversion = '6.0'
+norecursedirs = [
+    'venv',
+    '.venv',
+    'build',
+    'dist',
+    '.plugins',
+    'frontend',
+    '.env',
+    '.git',
+    '.github',
+    '.lime',
+    '.vscode'
+]
+faulthandler_timeout = 300
+
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | frontend
+  | poetry.lock
+)/
+'''
+
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3

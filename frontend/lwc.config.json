@@ -1,0 +1,14 @@
+[
+  {
+    "name": "lwc-limepkg-limebi-faker-loader",
+    "slot": "plugin.loaders"
+  },
+  {
+    "name": "lwc-limepkg-limebi-faker-limebi-faker-graphics",
+    "slot": null
+  },
+  {
+    "name": "lwc-limepkg-limebi-faker-limebi-faker-image-frame",
+    "slot": null
+  }
+]

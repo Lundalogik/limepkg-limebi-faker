@@ -16,7 +16,6 @@ authors     = ['Author <author@lime.tech>']
 [[tool.poetry.source]]
 name = 'lime'
 url  = 'https://pypi.lime.tech/simple/'
-secondary = true
 
 [tool.poetry.plugins.'lime_plugins']
 'limepkg-limebi-faker' = 'limepkg_limebi_faker'
@@ -34,7 +33,7 @@ isort = '^5.0.0'
 
 [tool.lime]
 [tool.lime.project]
-project_version = '1.173.0'
+project_version = '1.177.1'
 project_type    = 'package'
 
 

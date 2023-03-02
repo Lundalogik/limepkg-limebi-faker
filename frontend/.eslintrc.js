@@ -33,8 +33,6 @@ module.exports = {
         quotes: ['warn', 'single', { avoidEscape: true }],
         semi: ['warn', 'always'],
         'prettier/prettier': ['warn', { arrowParens: 'avoid' }],
-        '@stencil/element-type': 'warn',
-        '@stencil/required-jsdoc': 'off',
         '@typescript-eslint/no-unused-vars-experimental': 'warn',
         '@typescript-eslint/array-type': [
             'warn',
@@ -114,7 +112,6 @@ module.exports = {
         'prefer-const': 'warn',
         'prefer-object-spread': 'warn',
         radix: 'warn',
-        'react/jsx-no-bind': 'warn',
         'sonarjs/no-duplicate-string': 1,
         'sonarjs/cognitive-complexity': 'warn',
         'spaced-comment': [
@@ -147,7 +144,6 @@ module.exports = {
         },
         {
             files: ['src/**/*.{ts,tsx}'],
-            extends: ['plugin:@stencil/recommended'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 parserOption: {
@@ -156,11 +152,6 @@ module.exports = {
                 project: 'tsconfig.json',
             },
             rules: {
-                '@stencil/decorators-style': 'off',
-                '@stencil/render-returns-host': 'off',
-                '@stencil/required-jsdoc': 'off',
-                '@stencil/strict-boolean-conditions': 'off',
-                '@stencil/element-type': 'warn',
                 '@typescript-eslint/dot-notation': 'warn',
                 '@typescript-eslint/no-shadow': 'warn',
                 'no-console': 'off',
@@ -175,7 +166,6 @@ module.exports = {
                 'src/**/*.spec.{ts,tsx}',
                 'src/**/*.test-wrapper.{ts,tsx}',
             ],
-            extends: ['plugin:@stencil/recommended'],
             parserOptions: {
                 parserOption: {
                     jsx: true,
@@ -183,9 +173,6 @@ module.exports = {
                 project: 'tsconfig.lint.json',
             },
             rules: {
-                '@stencil/decorators-style': 'off',
-                '@stencil/strict-boolean-conditions': 'off',
-                '@stencil/render-returns-host': 'off',
                 '@typescript-eslint/dot-notation': 'warn',
                 'sonarjs/no-duplicate-string': 'off',
                 'sonarjs/no-identical-functions': 'off',

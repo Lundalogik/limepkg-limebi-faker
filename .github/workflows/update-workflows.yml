@@ -13,7 +13,7 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         python-version: [ 3.7 ]
-        poetry-version: [ 1.0.10 ]
+        poetry-version: [ 1.3.2 ]
     outputs:
       disable_autogenerate_workflows: ${{ steps.autoupdate-workflow.outputs.disable_autogenerate_workflows }}
     steps:
@@ -33,7 +33,7 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         python-version: [ 3.7 ]
-        poetry-version: [ 1.0.10 ]
+        poetry-version: [ 1.3.2 ]
     if: needs.preflight.outputs.disable_autogenerate_workflows != 'true'
     steps:
       - uses: actions/checkout@v3

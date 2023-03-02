@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 
 const targetDist: OutputTargetDist = {
     type: 'dist',
-    copy: [{ src: '../lwc.config.json' }],
+    copy: [],
 };
 
 export const config: Config = {

@@ -144,11 +144,13 @@ category = "main"
 description = "Internationalization utilities"
 name = "babel"
 optional = false
-python-versions = ">=3.6"
-version = "2.11.0"
+python-versions = ">=3.7"
+version = "2.12.1"
 
 [package.dependencies]
-pytz = ">=2015.7"
+[package.dependencies.pytz]
+python = "<3.9"
+version = ">=2015.7"
 
 [[package]]
 category = "main"
@@ -239,10 +241,10 @@ description = "The AWS SDK for Python"
 name = "boto3"
 optional = false
 python-versions = ">= 3.7"
-version = "1.26.73"
+version = "1.26.80"
 
 [package.dependencies]
-botocore = ">=1.29.73,<1.30.0"
+botocore = ">=1.29.80,<1.30.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.6.0,<0.7.0"
 
@@ -255,7 +257,7 @@ description = "Low-level, data-driven core of boto 3."
 name = "botocore"
 optional = false
 python-versions = ">= 3.7"
-version = "1.29.73"
+version = "1.29.80"
 
 [package.dependencies]
 jmespath = ">=0.7.1,<2.0.0"
@@ -879,7 +881,7 @@ marker = "python_version < \"3.9\""
 name = "importlib-resources"
 optional = false
 python-versions = ">=3.7"
-version = "5.10.2"
+version = "5.12.0"
 
 [package.dependencies]
 [package.dependencies.zipp]
@@ -967,14 +969,14 @@ description = "Functools like those found in stdlib"
 name = "jaraco.functools"
 optional = false
 python-versions = ">=3.7"
-version = "3.5.2"
+version = "3.6.0"
 
 [package.dependencies]
 more-itertools = "*"
 
 [package.extras]
-docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tidelift (>=1.4)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.classes", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.classes", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8"]
 
 [[package]]
 category = "main"
@@ -1064,7 +1066,7 @@ description = "Core functionality for working with Lime CRM databases"
 name = "lime-core"
 optional = false
 python-versions = ">=3.7,<4.0"
-version = "23.299.1"
+version = "23.302.0"
 
 [package.dependencies]
 APScheduler = ">=3.0.0,<4.0.0"
@@ -1165,7 +1167,7 @@ description = "Lime CRM as library, a package of lime packages to define a Lime 
 name = "lime-crm"
 optional = false
 python-versions = "*"
-version = "2.460.0"
+version = "2.462.0"
 
 [package.dependencies]
 alembic = "1.9.4"
@@ -1176,13 +1178,13 @@ appnope = "0.1.3"
 apscheduler = "3.10.0"
 arrow = "0.17.0"
 authlib = "0.15.6"
-babel = "2.11.0"
+babel = "2.12.1"
 backcall = "0.2.0"
 beautifulsoup4 = "4.11.2"
 billiard = "3.6.4.0"
 blinker = "1.5"
-boto3 = "1.26.73"
-botocore = "1.29.73"
+boto3 = "1.26.80"
+botocore = "1.29.80"
 cachetools = "5.3.0"
 celery = "5.2.2"
 certifi = "2022.12.7"
@@ -1223,19 +1225,19 @@ importlib-metadata = "4.13.0"
 ipython = "7.34.0"
 iso8601 = "1.1.0"
 itsdangerous = "2.1.2"
-"jaraco.functools" = "3.5.2"
+"jaraco.functools" = "3.6.0"
 jdcal = "1.4.1"
 jedi = "0.18.2"
 jinja2 = "3.0.3"
 jmespath = "1.0.1"
 kombu = "5.2.4"
-lime-core = "23.299.1"
+lime-core = "23.302.0"
 lime-database-admin = "1.9.3"
 lime-dynaconf-consul-loader = "1.4.0"
 lime-sspi = "1.1.0"
 lime-translation = "1.3.0"
 lime-webclient = "46.869.0"
-lime-win = "1.7.0"
+lime-win = "1.7.1"
 limepkg-bulk-export = "1.9.6"
 limepkg-bulk-update = "1.4.7"
 limepkg-product-analytics = "1.8.1"
@@ -1245,7 +1247,7 @@ markupsafe = "2.1.2"
 marshmallow = "3.19.0"
 marshmallow-jsonschema = "0.13.0"
 matplotlib-inline = "0.1.6"
-more-itertools = "9.0.0"
+more-itertools = "9.1.0"
 msal = "1.21.0"
 munch = "2.5.0"
 oauthlib = "3.2.2"
@@ -1256,8 +1258,8 @@ passlib = "1.7.4"
 pendulum = "2.1.2"
 pexpect = "4.8.0"
 pickleshare = "0.7.5"
-polib = "1.1.1"
-prompt-toolkit = "3.0.36"
+polib = "1.2.0"
+prompt-toolkit = "3.0.38"
 psutil = "5.9.4"
 ptyprocess = "0.7.0"
 pyasn1 = "0.4.8"
@@ -1275,7 +1277,7 @@ python-json-logger = "0.1.11"
 pytz = "2022.7.1"
 pytz-deprecation-shim = "0.1.0.post0"
 pytzdata = "2020.1"
-pywin32 = "304"
+pywin32 = "305"
 quickxorhash = "1.0.5"
 redis = "3.5.3"
 requests = "2.28.2"
@@ -1301,10 +1303,9 @@ webargs = "5.5.3"
 werkzeug = "2.2.3"
 wheel = "0.38.4"
 whitenoise = "5.3.0"
-wrapt = "1.14.1"
+wrapt = "1.15.0"
 wsgi-request-logger = "0.4.2"
 wtforms = "2.3.3"
-zipp = "3.13.0"
 
 [package.dependencies."backports.zoneinfo"]
 python = "<3.9"
@@ -1320,7 +1321,7 @@ version = "2.0.2"
 
 [package.dependencies.importlib-resources]
 python = "<3.9"
-version = "5.10.2"
+version = "5.12.0"
 
 [package.dependencies.pyreadline]
 python = "<3.8"
@@ -1333,6 +1334,10 @@ version = "0.2.7"
 [package.dependencies.tzdata]
 python = ">=3.6"
 version = "2022.7"
+
+[package.dependencies.zipp]
+python = "<3.9"
+version = "3.15.0"
 
 [package.source]
 reference = 'lime'
@@ -1431,11 +1436,11 @@ marker = "sys_platform == \"win32\""
 name = "lime-win"
 optional = false
 python-versions = ">=3.7"
-version = "1.7.0"
+version = "1.7.1"
 
 [package.dependencies]
 clr-loader = ">=0.2.2,<0.3.0"
-pywin32 = "304"
+pywin32 = ">=304"
 
 [package.source]
 reference = 'lime'
@@ -1587,7 +1592,7 @@ description = "More routines for operating on iterables, beyond itertools"
 name = "more-itertools"
 optional = false
 python-versions = ">=3.7"
-version = "9.0.0"
+version = "9.1.0"
 
 [[package]]
 category = "main"
@@ -1770,15 +1775,15 @@ description = "A library to manipulate gettext files (po and mo files)."
 name = "polib"
 optional = false
 python-versions = "*"
-version = "1.1.1"
+version = "1.2.0"
 
 [[package]]
 category = "main"
 description = "Library for building powerful interactive command lines in Python"
 name = "prompt-toolkit"
 optional = false
-python-versions = ">=3.6.2"
-version = "3.0.36"
+python-versions = ">=3.7.0"
+version = "3.0.38"
 
 [package.dependencies]
 wcwidth = "*"
@@ -2019,7 +2024,7 @@ marker = "sys_platform == \"win32\""
 name = "pywin32"
 optional = false
 python-versions = "*"
-version = "304"
+version = "305"
 
 [[package]]
 category = "main"
@@ -2392,7 +2397,7 @@ description = "Module for decorators, wrappers and monkey patching."
 name = "wrapt"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
-version = "1.14.1"
+version = "1.15.0"
 
 [[package]]
 category = "main"
@@ -2424,11 +2429,11 @@ description = "Backport of pathlib-compatible object wrapper for zip files"
 name = "zipp"
 optional = false
 python-versions = ">=3.7"
-version = "3.13.0"
+version = "3.15.0"
 
 [package.extras]
 docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "func-timeout", "jaraco.functools", "more-itertools", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "jaraco.functools", "more-itertools", "big-o", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8"]
 
 [metadata]
 content-hash = "3285d6d736e5f1ac9c85a448adeb29ec4c34c07217db439360ae91aaeb1b9846"
@@ -2511,10 +2516,10 @@ jinja2 = []
 jmespath = []
 kombu = []
 lime-core = [
-    {file = "lime_core-23.299.1-py3-none-any.whl", hash = "sha256:04f6065aae98b6595349353e660d99825a9bcc6cbb42eaf5a26ab3cec6a2fd0c"},
+    {file = "lime_core-23.302.0-py3-none-any.whl", hash = "sha256:a6949d4a399403dd3ba4d4a9c660bcf78c9df07b114c4db378b271aaedcab81a"},
 ]
 lime-crm = [
-    {file = "lime_crm-2.460.0-py2.py3-none-any.whl", hash = "sha256:153442d1c2acd716cb281814b78b1881d3a8ac9763b9f27413a6238ab7847f63"},
+    {file = "lime_crm-2.462.0-py2.py3-none-any.whl", hash = "sha256:5874649e4af9afac6b7e5471aea20adfd48ec38c8fe75287534062a51cfb9a82"},
 ]
 lime-database-admin = []
 lime-dynaconf-consul-loader = [
@@ -2528,8 +2533,8 @@ lime-webclient = [
     {file = "lime_webclient-46.869.0-py3-none-any.whl", hash = "sha256:f748b73f552f70cd3cd2a3e93ac946be9bc5883e8b75c96fafe648c88267071a"},
 ]
 lime-win = [
-    {file = "lime_win-1.7.0-py311-none-any.whl", hash = "sha256:a2ec8c79d88ff410c7342b9b0fc796211e02dc5e7aabffea1f6e1a99b65b347f"},
-    {file = "lime_win-1.7.0-py37-none-any.whl", hash = "sha256:a8c1bf31e1cceea90c83ff35ad0d91baf5a759f32deebc358f67a0f84f56935b"},
+    {file = "lime_win-1.7.1-py311-none-any.whl", hash = "sha256:62084223c893e7bd08bdb87fdea613338dadabb9b92d83efa588829444f81379"},
+    {file = "lime_win-1.7.1-py37-none-any.whl", hash = "sha256:dbb884a81d6ed45f23e420b77e00488b0b31d62e03227e961b4dbf303484372a"},
 ]
 limepkg-bulk-export = [
     {file = "limepkg_bulk_export-1.9.6-py3-none-any.whl", hash = "sha256:82129db3ae1e364170b77f35ab3b49255e05563e855a83c671af503d5d351693"},
